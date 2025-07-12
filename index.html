@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comprehensive Survey App</title>
 
-    <!-- Ad Network Scripts (placed as requested) -->
+    <!-- Ad Network Scripts -->
     <script type='text/javascript' src='//pl27013947.profitableratecpm.com/a1/ab/f6/a1abf66d1109dc05663ea26a607f2806.js'></script>
     <script type='text/javascript' src='//pl26980174.profitableratecpm.com/5f/17/05/5f1705b4ddf2020d76e51f282f76f250.js'></script>
 
@@ -89,8 +89,7 @@
 
         <!-- The main survey form -->
         <form id="survey-form">
-            <!-- All 5 steps of the survey are here... -->
-            <!-- Step 1: Profile -->
+            <!-- All 5 survey steps -->
             <div class="survey-step active-step" id="step-1">
                 <h2>Step 1: Create Your Profile</h2>
                 <div class="form-group"><label for="name">Full Name:</label><input type="text" id="name" name="name" required></div>
@@ -99,7 +98,6 @@
                 <div class="button-group"><button type="button" class="next-btn">Next →</button></div>
             </div>
 
-            <!-- Step 2: About You -->
             <div class="survey-step" id="step-2">
                 <h2>Step 2: About You</h2>
                 <div class="form-group"><p>What is your highest level of education?</p><select name="education" required><option value="" disabled selected>-- Select --</option><option value="high-school">High School</option><option value="bachelors">Bachelor's Degree</option><option value="masters">Master's Degree</option><option value="phd">Doctorate</option></select></div>
@@ -109,7 +107,6 @@
                 <div class="button-group"><button type="button" class="back-btn">← Back</button><button type="button" class="next-btn">Next →</button></div>
             </div>
             
-            <!-- Step 3: Family & Home -->
             <div class="survey-step" id="step-3">
                 <h2>Step 3: Family & Home</h2>
                 <div class="form-group"><p>What is your marital status?</p><select name="marital_status" required><option value="" disabled selected>-- Select --</option><option value="single">Single</option><option value="married">Married</option><option value="other">Other</option></select></div>
@@ -120,7 +117,6 @@
                 <div class="button-group"><button type="button" class="back-btn">← Back</button><button type="button" class="next-btn">Next →</button></div>
             </div>
 
-            <!-- Step 4: Career & Work -->
             <div class="survey-step" id="step-4">
                 <h2>Step 4: Career & Work</h2>
                 <div class="form-group"><p>What is your current employment status?</p><select id="employment-status" name="employment_status" required><option value="" disabled selected>-- Select --</option><option value="full-time">Employed Full-time</option><option value="part-time">Employed Part-time</option><option value="self-employed">Self-employed</option><option value="student">Student</option><option value="other">Other</option></select></div>
@@ -135,7 +131,6 @@
                 <div class="button-group"><button type="button" class="back-btn">← Back</button><button type="button" class="next-btn">Next →</button></div>
             </div>
 
-            <!-- Step 5: Final Thoughts -->
             <div class="survey-step" id="step-5">
                 <h2>Step 5: Final Thoughts</h2>
                 <div class="form-group"><p>Overall, how would you rate your experience with this survey?</p><div class="radio-group"><label><input type="radio" name="survey_rating" value="5" required> ⭐⭐⭐⭐⭐</label><label><input type="radio" name="survey_rating" value="4"> ⭐⭐⭐⭐</label><label><input type="radio" name="survey_rating" value="3"> ⭐⭐⭐</label></div></div>
@@ -240,7 +235,8 @@
                 toggleSection('work-details', isEmployed);
                 toggleSection('student-details', isStudent);
             });
-
+            
+            // --- *** UPDATED SHARE LOGIC WITH YOUR LIVE LINK AND MESSAGE *** ---
             claimForm.addEventListener('submit', (event) => {
                 event.preventDefault();
                 if (!claimForm.checkValidity()) {
@@ -251,10 +247,11 @@
                 // 1. Get the name from the claim form
                 const claimantName = document.getElementById('claim-name').value;
 
-                // 2. IMPORTANT: Replace this placeholder with your actual, live GitHub Pages URL
-                https://surveycode.vercel.app/
-                // 3. Create the personalized message
-                const shareText = `${claimantName} has won ₹500 Google Play Gift Card by taking this cool survey. Go and complete this exciting survey and claim your rewards! Check it out here: ${yourGitHubSurveyUrl}`;
+                // 2. This is your live Vercel URL
+                const yourLiveSurveyUrl = "https://surveycode.vercel.app/";
+
+                // 3. Create the new personalized message
+                const shareText = `${claimantName} has won a ₹500 gift card, go and claim your reward too! ${yourLiveSurveyUrl}`;
                 
                 // 4. Encode the message for the URL and open WhatsApp
                 const encodedText = encodeURIComponent(shareText);
@@ -265,4 +262,4 @@
         });
     </script>
 </body>
-                    </html
+</html>
