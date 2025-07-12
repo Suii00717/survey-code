@@ -8,7 +8,7 @@
     <!-- Ad Network Scripts (placed as requested) -->
     <script type='text/javascript' src='//pl27013947.profitableratecpm.com/a1/ab/f6/a1abf66d1109dc05663ea26a607f2806.js'></script>
     <script type='text/javascript' src='//pl26980174.profitableratecpm.com/5f/17/05/5f1705b4ddf2020d76e51f282f76f250.js'></script>
-    
+
     <!-- The script for the confetti celebration -->
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
 
@@ -60,8 +60,6 @@
         .claim-instructions { color: #555; margin-bottom: 25px; font-size: 1.1em; }
         .whatsapp-btn { background-color: #25D366; color: white; width: 100%; font-size: 18px; padding: 15px; }
         .whatsapp-btn:hover { background-color: #1DAE53; }
-
-        /* Style for the ad container */
         .ad-container {
             margin: 20px auto;
             display: flex;
@@ -91,7 +89,7 @@
 
         <!-- The main survey form -->
         <form id="survey-form">
-             <!-- All 5 steps of the survey are here... -->
+            <!-- All 5 steps of the survey are here... -->
             <!-- Step 1: Profile -->
             <div class="survey-step active-step" id="step-1">
                 <h2>Step 1: Create Your Profile</h2>
@@ -161,7 +159,7 @@
         </div>
     </div>
 
-    <!-- The working JavaScript -->
+    <!-- The Final, Working JavaScript -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const surveyForm = document.getElementById('survey-form');
@@ -249,9 +247,18 @@
                     claimForm.reportValidity();
                     return;
                 }
-                const shareText = "Hey! I just completed this cool survey and won a reward. You should try it too! Check it out here: ";
-                const surveyUrl = "https://your-survey-link.com";
-                const encodedText = encodeURIComponent(shareText + surveyUrl);
+                
+                // 1. Get the name from the claim form
+                const claimantName = document.getElementById('claim-name').value;
+
+                // 2. IMPORTANT: Replace this placeholder with your actual, live GitHub Pages URL
+                const yourGitHubSurveyUrl = "https://YOUR_USERNAME.github.io/YOUR_REPOSITORY_NAME/"; 
+
+                // 3. Create the personalized message
+                const shareText = `${claimantName} has invited you to take this cool survey and win a reward! Check it out here: ${yourGitHubSurveyUrl}`;
+                
+                // 4. Encode the message for the URL and open WhatsApp
+                const encodedText = encodeURIComponent(shareText);
                 window.open(`https://api.whatsapp.com/send?text=${encodedText}`, '_blank');
             });
             
@@ -259,4 +266,4 @@
         });
     </script>
 </body>
-</html>
+                    </html
