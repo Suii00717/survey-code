@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprehensive Survey App</title>
+
+    <!-- Ad Network Scripts (placed as requested) -->
+    <script type='text/javascript' src='//pl27013947.profitableratecpm.com/a1/ab/f6/a1abf66d1109dc05663ea26a607f2806.js'></script>
+    <script type='text/javascript' src='//pl26980174.profitableratecpm.com/5f/17/05/5f1705b4ddf2020d76e51f282f76f250.js'></script>
+    
+    <!-- The script for the confetti celebration -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+
+    <!-- CSS Styles -->
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f0f2f5;
+            display: flex; justify-content: center; align-items: center;
+            min-height: 100vh; margin: 20px 0; color: #333;
+        }
+        .app-container {
+            background-color: #ffffff; padding: 30px 40px; border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); max-width: 700px; width: 100%; box-sizing: border-box;
+        }
+        h1, h2 { text-align: center; color: #1c2938; }
+        h1 { margin-bottom: 20px; }
+        h2 { margin-bottom: 30px; font-weight: 500; }
+        .form-group, .claim-form-group { margin-bottom: 22px; }
+        .form-group p { font-weight: 600; margin-bottom: 10px; }
+        label { display: block; margin-bottom: 8px; font-weight: 600; font-size: 15px; }
+        input[type="text"], input[type="email"], input[type="number"], input[type="tel"], select, textarea {
+            width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box; font-size: 16px; transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        input:focus, select:focus, textarea:focus { outline: none; border-color: #007bff; box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25); }
+        .radio-group label, .checkbox-group label { font-weight: normal; display: inline-flex; align-items: center; margin-right: 20px; }
+        .radio-group input, .checkbox-group input { margin-right: 8px; }
+        .button-group { display: flex; justify-content: space-between; margin-top: 30px; }
+        button {
+            padding: 12px 25px; border: none; border-radius: 6px; font-size: 16px; font-weight: 600; cursor: pointer; transition: background-color 0.2s, transform 0.1s; text-decoration: none; display: inline-block; text-align: center;
+        }
+        button:hover { transform: translateY(-2px); }
+        .next-btn, .submit-btn { background-color: #007bff; color: white; }
+        .back-btn { background-color: #6c757d; color: white; }
+        .next-btn, .submit-btn { margin-left: auto; }
+        .survey-step, .conditional, #final-message-container { display: none; }
+        .survey-step.active-step { display: block; animation: fadeIn 0.5s; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        
+        #final-message-container { text-align: center; }
+        #reward-message h2 { color: #28a745; font-size: 2.2em; }
+        .gift-card-image {
+            max-width: 300px;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .claim-instructions { color: #555; margin-bottom: 25px; font-size: 1.1em; }
+        .whatsapp-btn { background-color: #25D366; color: white; width: 100%; font-size: 18px; padding: 15px; }
+        .whatsapp-btn:hover { background-color: #1DAE53; }
+
+        /* Style for the ad container */
+        .ad-container {
+            margin: 20px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="app-container">
+        <h1>Comprehensive Survey</h1>
+
+        <!-- Top Banner Ad Container -->
+        <div class="ad-container">
+            <script type="text/javascript">
+                atOptions = {
+                    'key' : '16e7d032b84182bd32a4ce590ee5c4f7',
+                    'format' : 'iframe',
+                    'height' : 50,
+                    'width' : 320,
+                    'params' : {}
+                };
+            </script>
+            <script type="text/javascript" src="//www.highperformanceformat.com/16e7d032b84182bd32a4ce590ee5c4f7/invoke.js"></script>
+        </div>
+
+        <!-- The main survey form -->
+        <form id="survey-form">
+             <!-- All 5 steps of the survey are here... -->
+            <!-- Step 1: Profile -->
+            <div class="survey-step active-step" id="step-1">
+                <h2>Step 1: Create Your Profile</h2>
+                <div class="form-group"><label for="name">Full Name:</label><input type="text" id="name" name="name" required></div>
+                <div class="form-group"><label for="email">Email Address:</label><input type="email" id="email" name="email" required></div>
+                <div class="form-group"><label for="age">Age:</label><input type="number" id="age" name="age" min="13" required></div>
+                <div class="button-group"><button type="button" class="next-btn">Next →</button></div>
+            </div>
+
+            <!-- Step 2: About You -->
+            <div class="survey-step" id="step-2">
+                <h2>Step 2: About You</h2>
+                <div class="form-group"><p>What is your highest level of education?</p><select name="education" required><option value="" disabled selected>-- Select --</option><option value="high-school">High School</option><option value="bachelors">Bachelor's Degree</option><option value="masters">Master's Degree</option><option value="phd">Doctorate</option></select></div>
+                <div class="form-group"><p>Which hobbies do you enjoy? (Optional)</p><div class="checkbox-group"><label><input type="checkbox" name="hobbies" value="reading"> Reading</label><label><input type="checkbox" name="hobbies" value="sports"> Sports</label><label><input type="checkbox" name="hobbies" value="gaming"> Gaming</label></div></div>
+                <div class="form-group"><p>Are you more of an introvert or an extrovert?</p><div class="radio-group"><label><input type="radio" name="personality" value="introvert" required> Introvert</label><label><input type="radio" name="personality" value="extrovert"> Extrovert</label><label><input type="radio" name="personality" value="ambivert"> Ambivert</label></div></div>
+                <div class="form-group"><p>What's your preferred way to relax?</p><select name="relax_method" required><option value="" disabled selected>-- Select --</option><option value="music">Listening to Music</option><option value="movies">Watching Movies/TV</option><option value="outdoors">Being Outdoors</option><option value="meditation">Meditation/Yoga</option></select></div>
+                <div class="button-group"><button type="button" class="back-btn">← Back</button><button type="button" class="next-btn">Next →</button></div>
+            </div>
+            
+            <!-- Step 3: Family & Home -->
+            <div class="survey-step" id="step-3">
+                <h2>Step 3: Family & Home</h2>
+                <div class="form-group"><p>What is your marital status?</p><select name="marital_status" required><option value="" disabled selected>-- Select --</option><option value="single">Single</option><option value="married">Married</option><option value="other">Other</option></select></div>
+                <div class="form-group"><p>Do you have children?</p><div class="radio-group"><label><input type="radio" name="has_children" value="yes" required> Yes</label><label><input type="radio" name="has_children" value="no"> No</label></div></div>
+                <div class="form-group conditional" id="children-count-group"><label for="children_count">How many children?</label><input type="number" id="children_count" name="children_count" min="1"></div>
+                <div class="form-group"><p>In what type of area do you live?</p><div class="radio-group"><label><input type="radio" name="area_type" value="urban" required> Urban</label><label><input type="radio" name="area_type" value="suburban"> Suburban</label><label><input type="radio" name="area_type" value="rural"> Rural</label></div></div>
+                <div class="form-group"><p>How do you primarily get your news?</p><div class="radio-group"><label><input type="radio" name="news_source" value="tv" required> TV News</label><label><input type="radio" name="news_source" value="social_media"> Social Media</label><label><input type="radio" name="news_source" value="websites"> News Websites/Apps</label></div></div>
+                <div class="button-group"><button type="button" class="back-btn">← Back</button><button type="button" class="next-btn">Next →</button></div>
+            </div>
+
+            <!-- Step 4: Career & Work -->
+            <div class="survey-step" id="step-4">
+                <h2>Step 4: Career & Work</h2>
+                <div class="form-group"><p>What is your current employment status?</p><select id="employment-status" name="employment_status" required><option value="" disabled selected>-- Select --</option><option value="full-time">Employed Full-time</option><option value="part-time">Employed Part-time</option><option value="self-employed">Self-employed</option><option value="student">Student</option><option value="other">Other</option></select></div>
+                <div class="conditional" id="work-details">
+                    <div class="form-group"><label for="industry">In which industry do you work?</label><input type="text" id="industry" name="industry"></div>
+                    <div class="form-group"><p>What is your work arrangement?</p><div class="radio-group"><label><input type="radio" name="work_arrangement" value="office"> In-Office</label><label><input type="radio" name="work_arrangement" value="hybrid"> Hybrid</label><label><input type="radio" name="work_arrangement" value="remote"> Fully Remote</label></div></div>
+                    <div class="form-group"><label for="commute_time">Daily one-way commute time (in minutes)?</label><input type="number" id="commute_time" name="commute_time" min="0"></div>
+                </div>
+                <div class="conditional" id="student-details">
+                    <div class="form-group"><label for="major">What is your major or field of study?</label><input type="text" id="major" name="major"></div>
+                </div>
+                <div class="button-group"><button type="button" class="back-btn">← Back</button><button type="button" class="next-btn">Next →</button></div>
+            </div>
+
+            <!-- Step 5: Final Thoughts -->
+            <div class="survey-step" id="step-5">
+                <h2>Step 5: Final Thoughts</h2>
+                <div class="form-group"><p>Overall, how would you rate your experience with this survey?</p><div class="radio-group"><label><input type="radio" name="survey_rating" value="5" required> ⭐⭐⭐⭐⭐</label><label><input type="radio" name="survey_rating" value="4"> ⭐⭐⭐⭐</label><label><input type="radio" name="survey_rating" value="3"> ⭐⭐⭐</label></div></div>
+                <div class="form-group"><label for="feedback">Any other comments?</label><textarea id="feedback" name="feedback" rows="4"></textarea></div>
+                <div class="button-group"><button type="button" class="back-btn">← Back</button><button type="submit" class="submit-btn">Submit Survey</button></div>
+            </div>
+        </form>
+
+        <!-- Final Message & Claim Form Container -->
+        <div id="final-message-container">
+            <div id="reward-message">
+                <h2>Congratulations!</h2>
+                <img src="https://i.ibb.co/YBrXQBp2/images-1.png" alt="Reward Prize" class="gift-card-image">
+                <p class="claim-instructions">Enter your details to claim your <strong>₹500 Reward</strong>, then share with 5 friends!</p>
+                <form id="claim-form">
+                    <div class="claim-form-group"><input type="text" id="claim-name" placeholder="Enter Your Full Name" required></div>
+                    <div class="claim-form-group"><input type="tel" id="claim-mobile" placeholder="Enter Your 10-Digit Mobile No." required pattern="[0-9]{10}"></div>
+                    <button type="submit" class="whatsapp-btn">✔️ Claim & Share on WhatsApp</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- The working JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const surveyForm = document.getElementById('survey-form');
+            const finalMessageContainer = document.getElementById('final-message-container');
+            const claimForm = document.getElementById('claim-form');
+            const steps = Array.from(document.querySelectorAll('.survey-step'));
+            let currentStep = 0;
+
+            const showStep = (stepIndex) => {
+                steps.forEach((step, index) => step.classList.toggle('active-step', index === stepIndex));
+            };
+
+            const validateStep = (stepIndex) => {
+                const currentStepElement = steps[stepIndex];
+                const inputs = currentStepElement.querySelectorAll('input:not([type="checkbox"]), select, textarea');
+                for (const input of inputs) {
+                    if (!input.checkValidity()) {
+                        input.reportValidity();
+                        return false;
+                    }
+                }
+                return true;
+            };
+
+            const triggerCelebration = () => {
+                if (typeof confetti === 'function') {
+                    confetti({ particleCount: 150, spread: 100, origin: { y: 0.6 } });
+                }
+            };
+
+            surveyForm.addEventListener('click', (e) => {
+                if (e.target.matches('.next-btn')) {
+                    if (validateStep(currentStep)) {
+                        currentStep++;
+                        showStep(currentStep);
+                    }
+                } else if (e.target.matches('.back-btn')) {
+                    currentStep--;
+                    showStep(currentStep);
+                }
+            });
+
+            surveyForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                if (validateStep(currentStep)) {
+                    surveyForm.style.display = 'none';
+                    document.querySelector('h1').style.display = 'none';
+                    finalMessageContainer.style.display = 'block';
+                    triggerCelebration();
+                }
+            });
+
+            const toggleSection = (sectionId, shouldShow) => {
+                const section = document.getElementById(sectionId);
+                if (!section) return;
+                section.style.display = shouldShow ? 'block' : 'none';
+                section.querySelectorAll('input, select').forEach(input => {
+                    if (shouldShow) {
+                        input.setAttribute('required', '');
+                    } else {
+                        input.removeAttribute('required');
+                        if (input.type === 'radio' || input.type === 'checkbox') input.checked = false;
+                        else input.value = '';
+                    }
+                });
+            };
+
+            document.querySelectorAll('input[name="has_children"]').forEach(radio => {
+                radio.addEventListener('change', e => {
+                    toggleSection('children-count-group', e.target.value === 'yes');
+                });
+            });
+
+            document.getElementById('employment-status').addEventListener('change', e => {
+                const status = e.target.value;
+                const isEmployed = ['full-time', 'part-time', 'self-employed'].includes(status);
+                const isStudent = status === 'student';
+                toggleSection('work-details', isEmployed);
+                toggleSection('student-details', isStudent);
+            });
+
+            claimForm.addEventListener('submit', (event) => {
+                event.preventDefault();
+                if (!claimForm.checkValidity()) {
+                    claimForm.reportValidity();
+                    return;
+                }
+                const shareText = "Hey! I just completed this cool survey and won a reward. You should try it too! Check it out here: ";
+                const surveyUrl = "https://your-survey-link.com";
+                const encodedText = encodeURIComponent(shareText + surveyUrl);
+                window.open(`https://api.whatsapp.com/send?text=${encodedText}`, '_blank');
+            });
+            
+            showStep(currentStep);
+        });
+    </script>
+</body>
+</html>
